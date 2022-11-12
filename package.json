@@ -10,11 +10,10 @@
   },
   "scripts": {
     "start": "node ./src/server.js",
-    "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js"
+    "test": "mocha test/integration/**/*_spec.js"
   },
   "devDependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^6.2.3",
-    "supertest": "^4.0.2"
+    "mocha": "^10.1.0",
+    "supertest": "^6.3.1"
   }
 }

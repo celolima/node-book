@@ -1,20 +1,20 @@
-const { request } = require('express')
-
 describe('Routes: Products', () => {
     const defaultProduct = {
         name: 'Default Product',
         describe: 'product description',
         price: 100
-    }
+    };
 
     describe('GET /products', () => {
         it('should return a list of products', done => {
             request
-            .get('/products')
-            .end((err, res) => {
-                expect(res.body[0].to.eql(defaultProduct))
-                done(err)
-            })
+                .get('/products')
+                .expect(200)
+                .expect([defaultProduct])
+                .end(function(err, res) {
+                    if (err) throw err;
+                    done();
+                });
         })
-    })
-})
+    });
+});
