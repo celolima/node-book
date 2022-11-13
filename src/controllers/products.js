@@ -11,4 +11,4 @@ class ProductsController {
     }
 }
 
-export {ProductsController};
+export default ProductsController;

@@ -1,10 +1,11 @@
 import express from 'express';
-const router = express.Router();
+import ProductsController from '../controllers/products.js';
 
-router.get('/', (req,res) => res.send([{
-    name: 'Default Product',
-    describe: 'product description',
-    price: 100
-}]))
+const router = express.Router();
+const controller = new ProductsController();
+
+router.get('/', (req,res) => {  
+    controller.get(req,res);
+});
 
 export default router;

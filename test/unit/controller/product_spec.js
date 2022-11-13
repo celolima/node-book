@@ -1,4 +1,4 @@
-import {ProductsController} from '../../../src/controllers/products.js';
+import ProductsController from '../../../src/controllers/products.js';
 
 import sinon from 'sinon';
 import chai from 'chai';
