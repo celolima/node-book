@@ -1,5 +1,6 @@
 {
   "name": "node-book",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "./src/server.js",
@@ -10,10 +11,13 @@
   },
   "scripts": {
     "start": "node ./src/server.js",
-    "test": "mocha test/integration/**/*_spec.js"
+    "test:integration": "mocha test/integration/**/*_spec.js",
+    "test:unit": "mocha test/unit/**/*_spec.js"
   },
   "devDependencies": {
+    "chai": "^4.3.7",
     "mocha": "^10.1.0",
+    "sinon": "^14.0.2",
     "supertest": "^6.3.1"
   }
 }

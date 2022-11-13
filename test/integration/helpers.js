@@ -1,6 +1,6 @@
-const supertest = require('supertest');
-const app = require('../../src/app.js');
-const assert = require('assert');
+import supertest from 'supertest';
+import app from '../../src/app.js';
+import assert from 'assert';
 
 global.request = supertest(app);
 global.app = app;
