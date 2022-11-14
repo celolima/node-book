@@ -1,4 +1,12 @@
 describe('Routes: Products', () => {
+
+    let request, app;
+
+    before(async () => {
+        app = await setupApp();
+        request = supertest(app);
+    });
+
     const defaultProduct = {
         name: 'Default Product',
         describe: 'product description',
@@ -17,4 +25,6 @@ describe('Routes: Products', () => {
                 });
         })
     });
+
+    after(async () => await app.database.close());
 });

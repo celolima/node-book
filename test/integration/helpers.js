@@ -1,7 +1,7 @@
 import supertest from 'supertest';
-import app from '../../src/app.js';
+import setupApp from '../../src/app.js';
 import assert from 'assert';
 
-global.request = supertest(app);
-global.app = app;
+global.setupApp = setupApp;
+global.supertest = supertest;
 global.assert = assert;
