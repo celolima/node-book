@@ -10,7 +10,7 @@ const expect = chai.expect;
 describe('Controllers: Products', () => {
     const defaultProduct = [{
         name: 'Default Product',
-        describe: 'product description',
+        description: 'product description',
         price: 100
     }];
 

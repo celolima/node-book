@@ -1,5 +1,6 @@
 import setupApp from './app.js';
-const port = 3000
+
+const port = process.env.PORT;
 
 (async () => {
     try {
