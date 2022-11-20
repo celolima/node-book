@@ -9,6 +9,9 @@ const connect = () => mongoose.connect(mongodbUrl,
 
 const close = () => mongoose.connection.close();
 
+// mongoose.connect(mongodbUrl,{ useNewUrlParser: true }, function (err) { 
+//  if (err) throw err; console.log('Successfully connected'); });
+
 export default {
     connect, 
     close

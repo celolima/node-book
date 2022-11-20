@@ -14,4 +14,5 @@ const configureExpress = () => {
 export default async() => {    
     const app = configureExpress();
     await app.database.connect();
+    return app;
 }
